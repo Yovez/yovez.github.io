@@ -142,13 +142,12 @@
                     <li class="w3-padding-16">Source Code Included</li>
                     <li class="w3-padding-16">Supports Versions 1.7.x - 1.16.x</li>
                     <li class="w3-padding-16">MySQL / SQLite Support</li>
-                    <li class="w3-padding-16"></li>
                     <li class="w3-padding-16">
-                        <h2>$ 15</h2>
+                        <h2>$20</h2>
                         <span class="w3-opacity">per hour</span>
                     </li>
                     <li class="w3-light-grey w3-padding-24">
-                        <button class="w3-button w3-white w3-padding-large w3-hover-black">Start Order</button>
+                        <div id="order_button"></div>>
                     </li>
                 </ul>
             </div>
@@ -161,6 +160,14 @@
     </div>
 
     <script src="script.js"></script>
+    
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="order_button.js"></script>
 
 </body>
 
