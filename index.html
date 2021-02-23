@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Yovurse - Plugin Development</title>
+    <title>Yovurse</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <script src="script.js" type="text/javascript"></script>
+    <script src="navbar.jsx" type="text/babel"></script>
     <style>
         body,
         h1,
@@ -15,7 +15,7 @@
         h3,
         h4,
         h5 {
-            font-family: "Poppins", sans-serif
+            font-family: "Poppins", sans-serif;
         }
 
         body {
@@ -27,15 +27,15 @@
             margin-top: 16px;
             opacity: 0.8;
             cursor: zoom-in;
-            width: 100%
+            width: 100%;
         }
 
         .w3-half img:hover {
-            opacity: 1
+            opacity: 1;
         }
 
         html {
-            scroll-behavior: smooth
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -45,87 +45,49 @@
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding w3-animate-left"
         style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+        <a href="javascript:void(0)" onClick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
             style="width:100%;font-size:22px">Close Menu</a>
         <div class="w3-container">
             <h3 class="w3-padding-64"><b>Yovurse</b></h3>
         </div>
         <!-- JavaScript NavBar from script.js -->
-        <div class="w3-bar-block" id="js-navbar"></div>
+        <div class="w3-bar-block" id="nav-bar"></div>
     </nav>
 
     <!-- Top menu on small screens -->
     <header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">
-        <a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onclick="w3_open()">☰</a>
+        <a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onClick="w3_open()">☰</a>
         <span>Yovurse</span>
     </header>
 
     <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    <div class="w3-overlay w3-hide-large" onClick="w3_close()" style="cursor:pointer" title="close side menu"
         id="myOverlay"></div>
 
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-        <!-- Header -->
-        <div class="w3-container" style="margin-top:80px" id="showcase">
-            <h1 class="w3-jumbo"><b>Plugin Development</b></h1>
-            <h1 class="w3-xxxlarge w3-text-green"><b>Showcase.</b></h1>
-            <hr style="width:50px;border:5px solid green" class="w3-round">
-        </div>
-
-        <!-- Photo grid (modal) -->
-        <div class="w3-row-padding">
-            <div class="w3-half">
-                <img src="images/make-a-custom-minecraft-plugin-for-you.jpg" onclick="onClick(this)"
-                    alt="Send Items to Chat w/ Hover Events">
-                <img src="images/2f501dae620e4a209b7f4df5fb27bd7f.webp" onclick="onClick(this)" alt="Token Shop">
-                <img src="images/45dd963782d281e0464b3f9ea17eb11e02cefcbf.webp" onclick="onClick(this)"
-                    alt="Floating Holograms Token Shop">
-            </div>
-
-            <div class="w3-half">
-                <img src="images/73ee9633723cf370008f390599dd5f1f782704bb.webp" onclick="onClick(this)"
-                    alt="Skin Selector Menu">
-                <img src="images/DisableCombiningEnchBooks.webp" onclick="onClick(this)"
-                    alt="Disable combining Enchanted Books">
-                <img src="images/2019-05-11_21.25.03.webp" onclick="onClick(this)" alt="Taking damage while in water">
-            </div>
-        </div>
-
-        <!-- Modal for full size images on click-->
-        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                <img id="img01" class="w3-image">
-                <p id="caption"></p>
-            </div>
-        </div>
-
-        <!-- Designers -->
-        <div class="w3-container" id="about" style="margin-top:75px">
+        <!-- About Me -->
+        <div class="w3-container" id="about" style="margin-top:50px">
             <h1 class="w3-xxxlarge w3-text-green"><b>About Me.</b></h1>
-            <hr style="width:50px;border:5px solid green" class="w3-round">
-            <p>I'm currently employeed at at a restaurant as my primary job, I work Tuesday, Thursday, Saturday 9-3.
-                Sometimes I may be able to delivery early than the posted delivery time, but it also acts as a cushion
-                incase of work or something from my personal life comes up.
+            <hr style="border:5px solid green" class="w3-round">
+            <p>
                 I'm an experienced Java programmer and more importantly a seasoned Bukkit/Spigot developer.
-                I have over 4 years of Bukkit/Spigot development experience, and have made well over 100 plugins.
-                My only public plugin I've released has nearly 20,000 total downloads, which is an addon for
-                ASkyBlock/BSkyBlock
-                and I do have quite a bit of experiencing dealing with SkyBlock servers.
-                I've completed over 40 freelance plugins and have maintained nearly a 5 Star average rating.
+                I have over 4 years of Bukkit/Spigot development experience, and have made well over 100 different plugins.
+                My only public plugin I've released has over 20,000 total downloads, which is an addon for
+                ASkyBlock/BSkyBlock.
+                I've completed over 50 freelance plugins and have maintained nearly a 5 Star average rating.
             </p>
         </div>
 
-        <!-- Packages / Pricing Tables -->
-        <div class="w3-container" id="packages" style="margin-top:75px">
-            <h1 class="w3-xxxlarge w3-text-green"><b>Plugin Dev.</b></h1>
-            <hr style="width:50px;border:5px solid green" class="w3-round">
-            <p>My goal is to get the idea you have, and shape it into a fully functional plugin down to the tee of
+        <!-- Goals -->
+        <div class="w3-container" id="packages" style="margin-top:20px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>My Goals.</b></h1>
+            <hr style="border:5px solid green" class="w3-round">
+            <p>Get the idea you have, and shape it into a fully functional plugin down to the tee of
                 exactly
                 what you want. I try to make little-to-no compromises to give you a top notch plugin for an exceptional
-                price, so that way in the end, we both walk away happy!
+                price, so that way in the end we both walk away happy!
                 I will get all the details and information from you, and shape the information into a fully functional
                 and
                 bug-free Minecraft server plugin (using the Bukkit & Spigot APIs). The plugin may support versions 1.6.x
@@ -134,22 +96,39 @@
                 added
                 to the plugin.</p>
         </div>
+        
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:20px" id="showcase">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Showcase.</b></h1>
+            <hr style="border:5px solid green" class="w3-round">
+        </div>
 
+        <!-- Photo grid (modal) -->
         <div class="w3-row-padding">
-            <div class="w3-half w3-margin-bottom">
-                <ul class="w3-ul w3-light-grey w3-center">
-                    <li class="w3-dark-grey w3-xlarge w3-padding-32">Custom Bukkit/Spigot Plugin</li>
-                    <li class="w3-padding-16">Source Code Included</li>
-                    <li class="w3-padding-16">Supports Versions 1.7.x - 1.16.x</li>
-                    <li class="w3-padding-16">MySQL / SQLite Support</li>
-                    <li class="w3-padding-16">
-                        <h2>$20</h2>
-                        <span class="w3-opacity">per hour</span>
-                    </li>
-                    <li class="w3-light-grey w3-padding-24">
-                        <div id="order_button"></div>>
-                    </li>
-                </ul>
+            <div class="w3-half">
+                <img src="images/make-a-custom-minecraft-plugin-for-you.jpg" onClick="onClick(this)"
+                    alt="Send Items to Chat w/ Hover Events" href="https://github.com/yovez">
+                <img src="images/2f501dae620e4a209b7f4df5fb27bd7f.webp" onClick="onClick(this)" alt="Token Shop">
+                <img src="images/45dd963782d281e0464b3f9ea17eb11e02cefcbf.webp" onClick="onClick(this)"
+                    alt="Floating Holograms Token Shop">
+            </div>
+
+            <div class="w3-half">
+                <img src="images/73ee9633723cf370008f390599dd5f1f782704bb.webp" onClick="onClick(this)"
+                    alt="Skin Selector Menu">
+                <img src="images/DisableCombiningEnchBooks.webp" onClick="onClick(this)"
+                    alt="Disable combining Enchanted Books">
+                <img src="images/2019-05-11_21.25.03.webp" onClick="onClick(this)" alt="Taking damage while in water">
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onClick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+                <p id="source"></p>
             </div>
         </div>
 
@@ -158,17 +137,14 @@
 
         <!-- End page content -->
     </div>
-
-    <script src="script.js"></script>
     
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-
-  <!-- Load our React component. -->
-  <script src="order_button.js"></script>
-
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="script.jsx" type="text/babel"></script>
+  
 </body>
 
 </html>
