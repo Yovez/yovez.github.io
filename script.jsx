@@ -16,8 +16,9 @@ function onClick(element) {
     document.getElementById("img01").src = element.src;
     document.getElementById("modal01").style.display = "block";
     document.getElementById("source").innerHTML = "";
-    if (element.getAttribute("href") != null) {
-        const source = <a href={element.getAttribute("href")}>Source</a>
+    const href = element.getAttribute("href");
+    if (href && href != 'null') {
+        const source = <a href={href}>Source</a>
         ReactDOM.render(source, document.getElementById("source"));
     }
     var captionText = document.getElementById("caption");

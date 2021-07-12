@@ -40,15 +40,16 @@
     </style>
 </head>
 
-<body>
+<body class="w3-black">
 
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding w3-animate-left"
         style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
         <a href="javascript:void(0)" onClick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
             style="width:100%;font-size:22px">Close Menu</a>
-        <div class="w3-container">
-            <h3 class="w3-padding-64"><b>Yovurse</b></h3>
+        <div class="w3-container" style="padding-top: 64px; padding-bottom: 64px;">
+            <h3><b>Andrew Bean's</b></h3>
+            <h3><b>Portfolio</b></h3>
         </div>
         <!-- JavaScript NavBar from script.js -->
         <div class="w3-bar-block" id="nav-bar"></div>
@@ -72,11 +73,19 @@
             <h1 class="w3-xxxlarge w3-text-green"><b>About Me.</b></h1>
             <hr style="border:5px solid green" class="w3-round">
             <p>
-                I'm an experienced Java programmer and more importantly a seasoned Bukkit/Spigot developer.
-                I have over 4 years of Bukkit/Spigot development experience, and have made well over 100 different plugins.
-                My only public plugin I've released has over 20,000 total downloads, which is an addon for
-                ASkyBlock/BSkyBlock.
-                I've completed over 50 freelance plugins and have maintained nearly a 5 Star average rating.
+                I'm an experienced Java developer with over 4 years experience primarily creating Minecraft server
+                plugins.
+                I grew bored of Minecraft server plugin development due to the repition of my work, and the loss of
+                enjoyment for the game
+                and the community. The next big step was web development and I'm enjoying it. I've been relearning HTML,
+                CSS, and JS with small personal
+                projects here and there. Online tutorials have been a big help, but working with the code hands on
+                through my own ideas and plans is where I strive to learn new material.
+                <br>
+                <br>
+                I am very interested in becoming a full-stack developer, my primary skill set includes JavaScript,
+                React, Node.js, Express, Mongoose, PugJS. I am trying to learn those skills to an intermediary level at
+                the least. I also plan to learn Java Spring, Vue, and Angular in the near future.
             </p>
         </div>
 
@@ -84,19 +93,18 @@
         <div class="w3-container" id="packages" style="margin-top:20px">
             <h1 class="w3-xxxlarge w3-text-green"><b>My Goals.</b></h1>
             <hr style="border:5px solid green" class="w3-round">
-            <p>Get the idea you have, and shape it into a fully functional plugin down to the tee of
-                exactly
-                what you want. I try to make little-to-no compromises to give you a top notch plugin for an exceptional
-                price, so that way in the end we both walk away happy!
-                I will get all the details and information from you, and shape the information into a fully functional
-                and
-                bug-free Minecraft server plugin (using the Bukkit & Spigot APIs). The plugin may support versions 1.6.x
-                -
-                1.16.x, depending on what you require out of the plugin. Additional libraries and API support can be
-                added
-                to the plugin.</p>
+            <p>
+                Shape ideas into well pledged solutions with a clear mindset on the product.
+                <br>
+                Communication with the team
+                and the client are top priority.
+                <br>
+                Stay on top - but preferably ahead - of the software challenges that web developers face all year round.
+                <br>
+                Keep clear cut notes and documention for the team and potential clients.
+            </p>
         </div>
-        
+
         <!-- Header -->
         <div class="w3-container" style="margin-top:20px" id="showcase">
             <h1 class="w3-xxxlarge w3-text-green"><b>Showcase.</b></h1>
@@ -106,19 +114,15 @@
         <!-- Photo grid (modal) -->
         <div class="w3-row-padding">
             <div class="w3-half">
-                <img src="images/make-a-custom-minecraft-plugin-for-you.jpg" onClick="onClick(this)"
-                    alt="Send Items to Chat w/ Hover Events" href="https://github.com/yovez">
-                <img src="images/2f501dae620e4a209b7f4df5fb27bd7f.webp" onClick="onClick(this)" alt="Token Shop">
-                <img src="images/45dd963782d281e0464b3f9ea17eb11e02cefcbf.webp" onClick="onClick(this)"
-                    alt="Floating Holograms Token Shop">
+                <img src="images/islandrate.png" onClick="onClick(this)"
+                    alt="IslandRate | My first big public plugin with over 20,000 downloads"
+                    href="https://github.com/Yovez/IslandRate-BentoBox">
             </div>
 
             <div class="w3-half">
-                <img src="images/73ee9633723cf370008f390599dd5f1f782704bb.webp" onClick="onClick(this)"
-                    alt="Skin Selector Menu">
-                <img src="images/DisableCombiningEnchBooks.webp" onClick="onClick(this)"
-                    alt="Disable combining Enchanted Books">
-                <img src="images/2019-05-11_21.25.03.webp" onClick="onClick(this)" alt="Taking damage while in water">
+                <img src="images/shouldyouride.png" onClick="onClick(this)"
+                    alt="ShouldYouRide? | My first public web app - Gives you weather & traffic information focused towards motorcyclists."
+                    href="https://github.com/Yovez/ShouldYouRide">
             </div>
         </div>
 
@@ -137,14 +141,14 @@
 
         <!-- End page content -->
     </div>
-    
-  <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script src="script.jsx" type="text/babel"></script>
-  
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="script.jsx" type="text/babel"></script>
+
 </body>
 
 </html>
